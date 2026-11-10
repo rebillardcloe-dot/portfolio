@@ -695,6 +695,17 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
 .fenetre-app{padding:14px 20px!important}
 .bloc-outils{margin-top:40px!important}
 @media (max-width:600px){.exemples{grid-template-columns:1fr!important}.bureau{padding:16px 10px!important}}
+.cal-mobile{display:none}
+@media (max-width:700px){
+  .cal-defile{display:none}
+  .cal-mobile{display:grid;gap:8px;padding:14px}
+  .evt-m{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;text-align:left;width:100%}
+  .m-an{font-size:12px;font-weight:700;opacity:.85;font-variant-numeric:tabular-nums}
+  .m-txt b{display:block;font-weight:500;font-size:14px;line-height:1.25}
+  .m-txt small{display:block;font-size:12px;opacity:.8;margin-top:2px}
+  .cal-barre{padding:14px}
+  .cal-detail{padding:16px}
+}
 .init{width:44px;height:44px;border-radius:50%;background:var(--bordeaux);color:var(--poudre);display:grid;place-items:center;font-weight:700;flex:none}
 @media (max-width:1000px){.kpis{grid-template-columns:1fr 1fr!important}.logos-ent .rang{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kpis{grid-template-columns:1fr!important}.recos{grid-template-columns:1fr}.projet.grand .visuel.img{min-height:0}.logos-ent .rang{grid-template-columns:1fr 1fr}.ent-logo{flex-direction:column;text-align:center;gap:8px}}
@@ -858,7 +869,7 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
       <p class="chapo">Mon parcours présenté comme un calendrier éditorial. Cliquez sur une publication pour l'ouvrir.</p>
       <div class="cal">
         <div class="cal-barre"><b>Calendrier éditorial · Cloé Rebillard</b><span class="cal-leg"><span><i class="pro"></i>Expérience</span><span><i class="ecole"></i>Formation</span></span></div>
-        <div class="cal-defile">
+        <div class="cal-mobile"><button type="button" class="evt pro evt-m" data-e="nws"><span class="m-an">2026</span><span class="m-txt"><b>Chargée de marketing et communication</b><small>NWS Laser</small></span></button><button type="button" class="evt pro evt-m" data-e="bat"><span class="m-an">2024-2026</span><span class="m-txt"><b>Chargée de communication et marketing · alternance</b><small>Bâtisseurs Bourguignons</small></span></button><button type="button" class="evt ecole evt-m" data-e="master"><span class="m-an">2024-2026</span><span class="m-txt"><b>Master Communication et Marketing</b><small>Burgundy School of Business</small></span></button><button type="button" class="evt pro clair evt-m" data-e="ben"><span class="m-an">2024-2026</span><span class="m-txt"><b>Conseil en stratégie · 3 entreprises</b><small>Bénévolat</small></span></button><button type="button" class="evt ecole evt-m" data-e="adobe"><span class="m-an">2024</span><span class="m-txt"><b>Suite Adobe · 59 heures</b><small>Formation</small></span></button><button type="button" class="evt pro evt-m" data-e="axa"><span class="m-an">2023-2024</span><span class="m-txt"><b>Chargée de communication</b><small>Agence AXA Dijon</small></span></button><button type="button" class="evt pro evt-m" data-e="maa"><span class="m-an">2022</span><span class="m-txt"><b>Assistante communication et marketing · stage</b><small>Marché aux Affaires</small></span></button><button type="button" class="evt ecole evt-m" data-e="bach"><span class="m-an">2021-2024</span><span class="m-txt"><b>Bachelor Management et Marketing</b><small>Burgundy School of Business</small></span></button><button type="button" class="evt ecole evt-m" data-e="bac"><span class="m-an">2021</span><span class="m-txt"><b>Baccalauréat SES, mention bien</b><small>Colmar</small></span></button></div><div class="cal-defile">
           <div class="cal-grille">
             <span class="cal-coin"></span><span class="an">2021</span><span class="an">2022</span><span class="an">2023</span><span class="an">2024</span><span class="an">2025</span><span class="an">2026</span>
             <span class="lib" style="grid-row:2">Entreprises</span>
