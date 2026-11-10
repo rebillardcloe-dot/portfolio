@@ -698,15 +698,18 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
 .cal-mobile{display:none}
 @media (max-width:700px){
   .cal-defile{display:none}
-  .cal-mobile{display:grid;gap:8px;padding:14px}
-  .evt-m{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;text-align:left;width:100%}
-  .m-an{font-size:12px;font-weight:700;opacity:.85;font-variant-numeric:tabular-nums}
-  .m-txt b{display:block;font-weight:500;font-size:14px;line-height:1.25}
-  .m-txt small{display:block;font-size:12px;opacity:.8;margin-top:2px}
+  .cal-mobile{display:block;padding:14px}
+  .mc-grille{display:grid;grid-template-columns:40px repeat(3,minmax(0,1fr));grid-auto-rows:minmax(58px,auto);gap:6px}
+  .mc-grille .mc-coin,.mc-grille .mc-tete{grid-row:1}
+  .mc-grille{grid-template-rows:auto}
+  .mc-tete{font-size:11px;font-weight:700;color:var(--bordeaux);text-align:center;align-self:end;padding-bottom:4px;border-bottom:1px solid #EEE9EA}
+  .mc-an{grid-column:1;font-size:12px;font-weight:700;color:var(--gris);align-self:start;padding-top:8px;border-top:1px solid #EEE9EA;font-variant-numeric:tabular-nums}
+  .evt-m{font-size:12px;padding:8px;line-height:1.25;text-align:center;display:flex;align-items:center;justify-content:center;min-width:0;overflow-wrap:normal;hyphens:manual}
+  .mc-autres{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;font-size:12px;color:var(--gris)}
+  .mc-autres .evt-m{padding:6px 10px}
   .cal-barre{padding:14px}
   .cal-detail{padding:16px}
 }
-[hidden]{display:none!important}
 .init{width:44px;height:44px;border-radius:50%;background:var(--bordeaux);color:var(--poudre);display:grid;place-items:center;font-weight:700;flex:none}
 @media (max-width:1000px){.kpis{grid-template-columns:1fr 1fr!important}.logos-ent .rang{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kpis{grid-template-columns:1fr!important}.recos{grid-template-columns:1fr}.projet.grand .visuel.img{min-height:0}.logos-ent .rang{grid-template-columns:1fr 1fr}.ent-logo{flex-direction:column;text-align:center;gap:8px}}
@@ -774,7 +777,7 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
       <h2>Mes atouts</h2>
       <div class="apport-grille">
         <div class="apport-item"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><h3>Polyvalente</h3><p>Stratégie, création, réseaux sociaux, Ads, site web et événementiel : je mène un projet du brief au bilan, en print comme en digital.</p></div>
-        <div class="apport-item"><span class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Autonome</h3><p>Un poste, une alternance, des stages et des missions bénévoles : je m&#x27;adapte vite à tout secteur.</p></div>
+        <div class="apport-item"><span class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Autonome</h3><p>Un poste, une alternance, des stages et des missions en freelance : je m&#x27;adapte vite à tout secteur.</p></div>
         <div class="apport-item"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3>Orientée résultats</h3><p>Un objectif par action, des résultats suivis, un budget ajusté.</p></div>
         <div class="apport-item"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M8 7h6M8 11h6"/></svg></span><h3>Une com&#x27; qu&#x27;on retient</h3><p>Sujet de mon mémoire : transformer une offre en histoire qui donne envie.</p></div>
       </div>
@@ -870,7 +873,7 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
       <p class="chapo">Mon parcours présenté comme un calendrier éditorial. Cliquez sur une publication pour l'ouvrir.</p>
       <div class="cal">
         <div class="cal-barre"><b>Calendrier éditorial · Cloé Rebillard</b><span class="cal-leg"><span><i class="pro"></i>Expérience</span><span><i class="ecole"></i>Formation</span></span></div>
-        <div class="cal-mobile"><button type="button" class="evt pro evt-m" data-e="nws"><span class="m-an">2026</span><span class="m-txt"><b>Chargée de marketing et communication</b><small>NWS Laser</small></span></button><button type="button" class="evt pro evt-m" data-e="bat"><span class="m-an">2024-2026</span><span class="m-txt"><b>Chargée de communication et marketing · alternance</b><small>Bâtisseurs Bourguignons</small></span></button><button type="button" class="evt ecole evt-m" data-e="master"><span class="m-an">2024-2026</span><span class="m-txt"><b>Master Communication et Marketing</b><small>Burgundy School of Business</small></span></button><button type="button" class="evt pro clair evt-m" data-e="ben"><span class="m-an">2024-2026</span><span class="m-txt"><b>Conseil en stratégie · 3 entreprises</b><small>Bénévolat</small></span></button><button type="button" class="evt ecole evt-m" data-e="adobe"><span class="m-an">2024</span><span class="m-txt"><b>Suite Adobe · 59 heures</b><small>Formation</small></span></button><button type="button" class="evt pro evt-m" data-e="axa"><span class="m-an">2023-2024</span><span class="m-txt"><b>Chargée de communication</b><small>Agence AXA Dijon</small></span></button><button type="button" class="evt pro evt-m" data-e="maa"><span class="m-an">2022</span><span class="m-txt"><b>Assistante communication et marketing · stage</b><small>Marché aux Affaires</small></span></button><button type="button" class="evt ecole evt-m" data-e="bach"><span class="m-an">2021-2024</span><span class="m-txt"><b>Bachelor Management et Marketing</b><small>Burgundy School of Business</small></span></button><button type="button" class="evt ecole evt-m" data-e="bac"><span class="m-an">2021</span><span class="m-txt"><b>Baccalauréat SES, mention bien</b><small>Colmar</small></span></button></div><div class="cal-defile">
+        <div class="cal-mobile"><div class="mc-grille"><span class="mc-coin"></span><span class="mc-tete">Entreprises</span><span class="mc-tete">Bénévolat</span><span class="mc-tete">Formation</span><span class="mc-an" style="grid-row:2">2026</span><span class="mc-an" style="grid-row:3">2025</span><span class="mc-an" style="grid-row:4">2024</span><span class="mc-an" style="grid-row:5">2023</span><span class="mc-an" style="grid-row:6">2022</span><span class="mc-an" style="grid-row:7">2021</span><button type="button" class="evt pro evt-m" data-e="nws" style="grid-column:2;grid-row:2 / span 1">NWS Laser</button><button type="button" class="evt pro evt-m" data-e="bat" style="grid-column:2;grid-row:3 / span 2">Bâtisseurs Bourgui&shy;gnons</button><button type="button" class="evt pro evt-m" data-e="axa" style="grid-column:2;grid-row:5 / span 1">Agence AXA</button><button type="button" class="evt pro evt-m" data-e="maa" style="grid-column:2;grid-row:6 / span 1">Marché aux Affaires</button><button type="button" class="evt pro clair evt-m" data-e="ben" style="grid-column:3;grid-row:2 / span 3">3 entreprises</button><button type="button" class="evt ecole fort evt-m" data-e="master" style="grid-column:4;grid-row:2 / span 3">Master BSB</button><button type="button" class="evt ecole evt-m" data-e="bach" style="grid-column:4;grid-row:5 / span 3">Bachelor BSB</button></div><div class="mc-autres"><span>Aussi :</span><button type="button" class="evt ecole evt-m" data-e="adobe">Suite Adobe · 2024</button><button type="button" class="evt ecole evt-m" data-e="bac">Bac SES · 2021</button></div></div><div class="cal-defile">
           <div class="cal-grille">
             <span class="cal-coin"></span><span class="an">2021</span><span class="an">2022</span><span class="an">2023</span><span class="an">2024</span><span class="an">2025</span><span class="an">2026</span>
             <span class="lib" style="grid-row:2">Entreprises</span>
