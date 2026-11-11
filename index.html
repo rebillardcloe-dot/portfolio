@@ -724,6 +724,31 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
 .init{width:44px;height:44px;border-radius:50%;background:var(--bordeaux);color:var(--poudre);display:grid;place-items:center;font-weight:700;flex:none}
 @media (max-width:1000px){.kpis{grid-template-columns:1fr 1fr!important}.logos-ent .rang{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kpis{grid-template-columns:1fr!important}.recos{grid-template-columns:1fr}.projet.grand .visuel.img{min-height:0}.logos-ent .rang{grid-template-columns:1fr 1fr}.ent-logo{flex-direction:column;text-align:center;gap:8px}}
+
+.situations .wrap{padding-block:56px}
+.sit-carte{background:var(--blanc);border:1px solid var(--poudre-2);border-radius:26px;padding:clamp(20px,3vw,32px);display:grid;gap:22px}
+.sit-tete{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap}
+.sit-tete h2{font-size:clamp(28px,3.4vw,40px)}
+.sit-choix{display:grid;gap:6px;font-size:13px;color:var(--gris);min-width:min(100%,380px)}
+.sit-choix select{font:inherit;font-size:16px;font-weight:500;color:var(--bordeaux);padding:12px 44px 12px 16px;border-radius:14px;border:1.5px solid var(--bordeaux);background:var(--ivoire) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237B2230' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/18px;appearance:none;-webkit-appearance:none;cursor:pointer;width:100%}
+.sit-reponse{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;align-items:start;border-top:1px solid var(--poudre-2);padding-top:22px}
+.sit-reponse small{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:10px}
+.sit-reponse ol{margin:0;padding:0;list-style:none;counter-reset:e;display:grid;gap:10px}
+.sit-reponse li{counter-increment:e;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;font-size:15.5px}
+.sit-reponse li::before{content:counter(e);width:28px;height:28px;border-radius:50%;background:var(--bordeaux);color:var(--blanc);display:grid;place-items:center;font-size:13px;font-weight:700}
+.sit-vecu{margin:0;background:var(--poudre);border-radius:18px;padding:16px 18px;font-size:15px}
+.sit-vecu b{display:block;font-family:var(--f-titre);font-weight:400;font-size:20px;color:var(--bordeaux);margin-bottom:4px}
+@media (max-width:700px){.sit-reponse{grid-template-columns:1fr}}
+/* soft skills plus compactes */
+.softs2{gap:10px!important}
+.soft2{padding:12px 14px!important;gap:10px!important;border-radius:14px!important}
+.soft2 .ico{width:32px!important;height:32px!important;border-radius:9px!important}
+.soft2 .ico svg{width:17px!important;height:17px!important}
+.soft2 b{font-size:14.5px!important}
+.soft2 > div span{font-size:13px!important;line-height:1.35!important}
+.soft2 > div span.soft-xp{font-size:10.5px!important;padding:1px 7px!important;margin:2px 0 1px!important}
+
+@media (max-width:600px){.softs2{grid-template-columns:1fr 1fr!important}.soft2{flex-direction:column!important;padding:12px!important}.soft2 > div span:not(.soft-xp){display:none}.sit-choix select{font-size:15px}}
 </style>
 </head>
 <body>
@@ -877,6 +902,22 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
   </section>
 
 
+  <section class="bloc situations" id="situations">
+    <div class="wrap">
+      <div class="sit-carte">
+        <div class="sit-tete">
+          <div><p class="surtitre">Et si…</p><h2>Mises en situation</h2></div>
+          <label class="sit-choix" for="sit-select"><span>Choisissez une situation</span>
+            <select id="sit-select"><option value="0">Le budget communication est divisé par deux</option><option value="1">La page Facebook ne décolle pas</option><option value="2">Un événement pour 300 personnes à organiser</option><option value="3">Un salon professionnel dans un mois</option><option value="4">Un nouveau produit à lancer</option><option value="5">Une entreprise qui part de zéro</option><option value="6">Le site ne génère pas de contacts</option><option value="7">Il faut fidéliser les clients existants</option><option value="8">Un réseau de franchisés à fédérer</option><option value="9">Un commentaire négatif sur les réseaux</option><option value="10">Trois demandes urgentes en même temps</option><option value="11">La direction demande un bilan des actions</option></select></label>
+        </div>
+        <div class="sit-reponse" aria-live="polite">
+          <div><small>Comment je gère</small><ol id="sit-etapes"></ol></div>
+          <p class="sit-vecu"><b>Je l'ai vécu</b><span id="sit-vecu"></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="bloc" id="parcours">
     <div class="wrap">
       <p class="surtitre">Formation et expériences</p>
@@ -1006,5 +1047,8 @@ Bien cordialement,</textarea>
 })();
 </script>
 <script>(function(){var d=document.getElementById('fenetre');if(d)d.addEventListener('close',function(){var v=document.getElementById('dlg-video');if(v)v.pause()})})();</script>
+<script>(function(){var D=[["Le budget communication est divisé par deux", ["Je fais le tri : quels canaux rapportent vraiment des contacts ?", "Je mise sur l'organique (réseaux, SEO, fiche Google) et je garde des Ads très ciblées", "Je suis le coût par clic et les leads chaque semaine pour réajuster"], "Bâtisseurs Bourguignons, en pleine crise du bâtiment : 0,18 € le clic et environ 20 leads par mois via le site."], ["La page Facebook ne décolle pas", ["J'analyse l'existant : rythme, sujets, ce qui fonctionne", "Je pose une ligne éditoriale et un calendrier de 2 à 3 publications par semaine", "Je mesure la visibilité et j'ajuste les formats"], "Agence AXA Dijon : +136 % de visibilité sur la page Facebook."], ["Un événement pour 300 personnes à organiser", ["Je construis le rétroplanning et le budget", "Je gère la logistique, les prestataires et les inscriptions", "Je communique avant, pendant et après l'événement"], "Marché aux Affaires : team building de 2 jours pour 300 franchisés."], ["Un salon professionnel dans un mois", ["Je prépare les supports : affiche, catalogues, stand", "J'annonce notre présence : LinkedIn, e-mailing, presse spécialisée", "Je relance les contacts rencontrés après le salon"], "NWS Laser : salons Micronora et SIANE."], ["Un nouveau produit à lancer", ["Je fais une veille et une étude de marché pour cerner la cible", "Je définis le message et les canaux de lancement", "Je prépare les contenus et je suis les premiers retours"], "NWS Laser : lancements de produits, veilles et études de marché."], ["Une entreprise qui part de zéro", ["Je définis le positionnement et la cible", "Je crée l'identité visuelle et la ligne éditoriale", "Je lance les premiers contenus et les outils prêts à l'emploi"], "Cani Positive et Forme & Force, accompagnées en freelance."], ["Le site ne génère pas de contacts", ["J'analyse le parcours visiteur et le référencement", "Je crée une landing page claire avec un appel à l'action", "J'alimente le SEO : articles, fiche Google, référencement local"], "Bâtisseurs Bourguignons : landing page, articles SEO et posts fiche Google."], ["Il faut fidéliser les clients existants", ["Je segmente les clients selon leurs besoins", "Je prépare des offres et des e-mailings de fidélisation", "Je mesure les ouvertures et les retours pour affiner"], "Agence AXA : offres commerciales et campagnes de fidélisation par e-mail."], ["Un réseau de franchisés à fédérer", ["J'écoute les attentes du réseau", "Je crée des outils communs : manuel, communication interne", "J'organise des temps forts pour créer du lien"], "Marché aux Affaires : manuel franchise, communication interne et team building."], ["Un commentaire négatif sur les réseaux", ["Je réponds vite, avec calme et une solution", "Je bascule en message privé si la situation le demande", "J'en tire un enseignement pour la suite"], "Modération des réseaux sociaux des Bâtisseurs Bourguignons."], ["Trois demandes urgentes en même temps", ["Je trie par impact et par échéance", "Je préviens chacun du délai réaliste", "Je livre dans l'ordre, sans sacrifier la qualité"], "Deux ans à mener de front Master, alternance et missions freelance."], ["La direction demande un bilan des actions", ["Je rassemble les chiffres clés de chaque canal", "Je les présente simplement : ce qui marche, ce qui ne marche pas", "Je propose les priorités et le budget de la suite"], "Plan de communication annuel : bilan, objectifs, budget et calendrier."]],s=document.getElementById('sit-select');if(!s)return;
+function m(){var d=D[+s.value],o=document.getElementById('sit-etapes');o.innerHTML='';d[1].forEach(function(t){var li=document.createElement('li');li.textContent=t;o.appendChild(li)});document.getElementById('sit-vecu').textContent=d[2];}
+s.addEventListener('change',m);m();})();</script>
 </body>
 </html>
