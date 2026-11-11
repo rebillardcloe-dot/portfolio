@@ -527,7 +527,7 @@ dialog[open]{animation:apparait .3s ease-out}
 .curseur{display:inline-block;width:1.5px;height:18px;background:var(--encre);margin-left:-8px;animation:clign 1s steps(1) infinite}
 @keyframes clign{50%{opacity:0}}
 .g-photo{aspect-ratio:16/10;max-width:100%;overflow:hidden;border-top:1px solid #EEE9EA}
-.g-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 52%;display:block}
+.g-photo img{width:100%;height:100%;object-fit:cover;object-position:48% 40%;display:block}
 .g-corps{padding:16px 20px 20px;display:grid;gap:10px}
 .g-nom{font-family:var(--f-titre);font-size:28px;line-height:1.05;color:var(--encre)}
 .g-sous{color:var(--gris);font-size:15px;margin-top:-6px}
@@ -716,6 +716,7 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
 .visuel.img picture{display:block;width:100%;height:100%}
 .realis{font-size:14px;color:var(--gris);margin-top:8px;line-height:1.45}
 @media (min-width:701px){.poste{width:720px!important;max-width:100%!important}.bureau{aspect-ratio:16/10!important;justify-content:center!important}}
+.contact-photo{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:28px;border:6px solid rgba(255,255,255,.18);margin-bottom:28px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .init{width:44px;height:44px;border-radius:50%;background:var(--bordeaux);color:var(--poudre);display:grid;place-items:center;font-weight:700;flex:none}
 @media (max-width:1000px){.kpis{grid-template-columns:1fr 1fr!important}.logos-ent .rang{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kpis{grid-template-columns:1fr!important}.recos{grid-template-columns:1fr}.projet.grand .visuel.img{min-height:0}.logos-ent .rang{grid-template-columns:1fr 1fr}.ent-logo{flex-direction:column;text-align:center;gap:8px}}
@@ -913,6 +914,7 @@ blockquote footer b{display:block;color:var(--encre);font-weight:500;font-size:1
   <section class="contact" id="contact">
     <div class="wrap">
       <div>
+        <img class="contact-photo" src="img/cloe-portrait.jpg" alt="Portrait de Cloé Rebillard" width="900" height="876" loading="lazy">
         <h2>Travaillons <em>ensemble</em></h2>
         <p>Un poste à pourvoir à Dijon ou autour ? Le message est déjà prêt, il ne vous reste qu'à l'envoyer. Vous préférez en parler de vive voix ? Appelez-moi.</p>
         <div class="contact-alt">
